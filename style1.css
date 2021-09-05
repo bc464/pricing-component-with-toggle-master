@@ -1,0 +1,235 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	text-align: center;
+  min-height: 100vh;
+  background-color: hsl(240, 78%, 98%);
+  background-image: url("./images/bg-top.svg"),
+        url("./images/bg-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right top, left bottom;
+}
+h1 {
+	padding-top: 50px;
+	padding-bottom: 30px;
+  font-size: 23px;
+  color: hsl(233, 13%, 49%);
+}
+h2 {
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+hr {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 20px;
+}
+h3 {
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+p {
+  padding-bottom: 15px;
+}
+.container1 p,
+.container3 p {
+  color: hsl(233, 13%, 49%) ;
+}
+table {
+	margin:  auto;
+}
+span {
+  color: hsl(234, 14%, 74%);
+}
+
+/*****flipwithclick-css******/
+label[for='test'] {
+  display:block;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+}
+input[type=checkbox] {
+  opacity: 0;
+  cursor: pointer;
+}
+input[type=checkbox]:checked ~ label .reversible {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+input[type=checkbox]:checked ~ .reversible {
+      transform: rotateY(180deg);
+      box-shadow: -5px 5px 5px #aaa;
+}
+.reversible {
+    width: 300px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: transform 1s ease;
+    transition: all 1s
+}
+.toggle {
+    position: relative;
+}
+.toggle_pit {
+  width: 46px;
+  height: 24px;
+  background-color: hsl(236, 72%, 79%);
+  border: 1px solid hsl(236, 72%, 79%);
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.toggle_knob {
+  width: 19px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+}
+.toggle_label {
+  position: relative;
+  line-height: 16px;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  clip: rect(0 0 0 0);
+  user-select: none;
+  margin-left: 43%;
+}
+.toggle .toggle_input:checked ~ .toggle_pit {
+  background-color: hsl(236, 72%, 79%);
+  border: 1px solid hsl(236, 72%, 79%);
+}
+.toggle .toggle_input:checked ~ .toggle_pit .toggle_knob {
+  left: 5px;
+}
+.toggle .toggle_input {
+  display: none;
+}
+.move {
+  margin-top: -1.49%;
+  margin-left: -1.2%;
+  position: absolute;
+}
+.monthly {
+  margin-left: 40px;
+}
+
+/*******TILE INFO******/
+.tile-front {
+  z-index: 2;
+}
+.tile-back {
+  -webkit-transform: rotateY( 180deg);
+  transform: rotateY( 180deg);
+}
+/*******CONTAINER INFO*********/
+.container {
+	display: flex;
+	margin-top: 80px;
+	justify-content: center;
+}
+.btn {
+	width: 80%;
+	border-radius: 5px;
+	padding: 10px 15px;
+	text-transform: uppercase;
+  color: #fff;
+	background-color: hsl(236, 72%, 79%);
+	border: 1px solid hsl(236, 72%, 79%);
+	cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+.btn-center {
+  background-color: #fff;
+  color: hsl(236, 72%, 79%);
+}
+.btn-center:hover {
+  background-color: hsl(236, 72%, 79%);
+  border: 1px solid #fff;
+  color: #fff;
+}
+.btn-left:hover,
+.btn-right:hover {
+  background-color: #fff;
+  color:hsl(236, 72%, 79%) ;
+}
+.container1 {
+	width: 100%;
+	border-radius: 5px;
+	background-color: #fff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+	transition: all .8s ease;
+	overflow: hidden;
+	position: absolute;
+}
+.container2 {
+	width: 100%;
+	border-radius: 5px;
+	margin-top: -30px;
+	margin-bottom: -30px;
+	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  padding-top: 35px;
+	margin-top: -15px;
+	padding-bottom: 35px;
+	color: #fff;
+  backface-visibility: hidden;
+	transition: all .8s ease;
+	overflow: hidden;
+	position: absolute;
+  background-image: linear-gradient(
+        to right,
+        hsl(236, 72%, 79%),
+        hsl(237, 63%, 64%)
+    );
+}
+.container3 {
+	width: 100%;
+	border-radius: 5px;
+	background-color: #fff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+	transition: all .8s ease;
+	overflow: hidden;
+	position: absolute;
+}
+.attribution { 
+	font-size: 11px; 
+	text-align: center; 
+	margin-top: 2%;
+}
+.attribution a { 
+	color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width:  660px) {
+ 	    body {
+        background-image: url("./images/bg-top.svg");
+        background-position: 135% -45px;
+        width: 375px;
+    }
+      .container {
+ 		    flex-direction: column;
+ 		}
+ 	    .move {
+        margin-top: -4.50%;
+        margin-left: -3%;
+        position: absolute;
+    }
+      .reversible {
+        margin:  0 auto 400px;
+    }
+  }
